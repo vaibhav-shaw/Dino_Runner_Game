@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: cursive;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#3193ce, #3ec163, #a9c837);
+}
+.name{
+    color: white;
+    text-decoration:underline;
+    text-decoration-style:dotted;
+}
+.lnk{
+    text-align: center;
+}
+
+/* =======================Visibility===================== */
+.isVisible{
+    display: none;
+}
+.container{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+/* =======================Start/ Restart Button===================== */
+#start, #automate{
+    height: 35px;
+    width: 150px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 20% 20% 20% 20%;
+}
+
+#reset{
+    height: 30px;
+    width: 100px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+}
+.restart{
+    height: 50px;
+    width: auto;
+}
+/* =======================Play Ground===================== */
+.playground{
+    height: 400px;
+    width: 1200px;
+    border: 2px solid black;
+    background-color: white;
+}
+/* =======================T-REXX Dino===================== */
+.dino{
+    height: 70px;
+    width: 70px;
+    background-image: url(../assets/image/dino.png);
+    background-size: 70px;
+    position: relative;
+    top: 300px;
+}
+.jump{
+    animation: dinoAnime 0.5s linear infinite;
+}
+@keyframes dinoAnime {
+    0%,100%{
+        top:300px;
+    }
+    45%,55%{
+        top: 120px;
+    }
+    50%{
+        top: 120px;
+    }
+    60%{
+        top: 140px;
+    }
+    80%{
+        top: 200px;
+    }
+}
+/* =======================Cactus 1/ Cactus 2/ Castus 3===================== */
+.cactus1{
+    height: 70px;
+    width: 40px;
+    position: relative;
+    background-image: url(../assets/image/SmallCactus1.png);
+    background-repeat: no-repeat;
+    top: 240px;
+    left: 1150px;
+}
+.cactus2{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    background-image: url(../assets/image/SmallCactus2.png);
+    background-repeat: no-repeat;
+    top: 240px;
+    left: 1100px;
+}
+.cactus3{
+    height: 70px;
+    width: 100px;
+    position: relative;
+    background-image: url(../assets/image/SmallCactus3.png);
+    background-repeat: no-repeat;
+    top: 240px;
+    left: 1100px;
+}
+
+.cactusMove{
+    animation: cactusAnime 1.8s linear infinite;
+}
+@keyframes cactusAnime {
+    0%{
+        left: 1150px;
+    }
+    100%{
+        left: -400px;
+    }
+}
+/* =======================Dino Track===================== */
+.track{
+    height: 30px;
+    width: 4000px;
+    position: relative;
+    top: 220px;
+    background-image: url(../assets/image/Track.png);
+    background-repeat: repeat-x;
+    right: 0px;
+}
+.trackMove{
+    animation: trackAnime 3.2s linear infinite;
+}
+@keyframes trackAnime {
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 200%;
+    }
+}
+/* =======================Clouds===================== */
+.cloud{
+    height: 30px;
+    width: 90px;
+    position: relative;
+    top: -60px;
+    background-image: url(../assets/image/Cloud.png);
+    background-repeat: no-repeat;
+    left: 1110px;
+}
+.cloudMove{
+    animation: cloudAnime 4s linear infinite;
+}
+@keyframes cloudAnime {
+    0%{
+        left: 1110px;
+    }
+    100%{
+        left: -100px;
+    }
+}
+.ending{
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.git{
+    padding-right: 20px;
+}
+.mail{
+    padding-right: 20px;
+}
+.gameOver{
+    padding-top: -5px;
+}
+.gameEnd{
+    background-color: rgb(58, 50, 50);
+    opacity: 0.5;
+}
+/*
+ Sorry to say that this game is not responsive! :(
+Atleast 1200px X 400px screen resolution is required
+*/
